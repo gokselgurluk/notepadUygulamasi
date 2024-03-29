@@ -59,11 +59,13 @@ public class Main {
                     fileName = input.nextLine();
                     //fileText = new File(fileName);
                     File readFile = new File(fileName);
+
                     try {
                         BufferedReader bufferedReader = new BufferedReader(new FileReader(readFile));
                         String Line;
+                        System.out.println("Dosya da Kayıtlı Metinleriniz");
                         while ((Line = bufferedReader.readLine()) != null) {
-                            System.out.println("Dosya da Kayıtlı Metinleriniz\n" + Line);
+                            System.out.println(Line);
                         }
 
                     } catch (FileNotFoundException e) {
@@ -72,6 +74,7 @@ public class Main {
                         System.err.println("Dosya okunurken bir hata oluştu: " + e.getMessage());
                     }
                     break;
+
 
                 case 3:
                     flag = false;
