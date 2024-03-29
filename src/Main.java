@@ -22,7 +22,7 @@ public class Main {
                     String fileName = input.nextLine();
                     File fileText = new File(fileName);
                     if (fileText.exists()) {
-                        System.out.println("Kaydedilecek metini giriniz");
+                        System.out.println("Kaydedilecek metni giriniz");
                         String text = input.nextLine();
 
                         try {
