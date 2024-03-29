@@ -18,11 +18,11 @@ public class Main {
             input.nextLine();
             switch (userVote) {
                 case 1:
-                    System.out.println("Kayıt Dosya Adı Giriniz");
+                    System.out.println("Kayıt Yapılacak Dosya Adını Giriniz");
                     String fileName = input.nextLine();
                     File fileText = new File(fileName);
                     if (fileText.exists()) {
-                        System.out.println("Kaydedilecek metni giriniz");
+                        System.out.println("Kayıt Yapılacak Metni giriniz");
                         String text = input.nextLine();
 
                         try {
@@ -35,10 +35,10 @@ public class Main {
                             e.getMessage();
                         }
                     } else {
-                        System.out.println("Dosya Mevcut Degil Oluşturulsunmu: E / H");
+                        System.out.println("Dosya Mevcut Degil Oluşturma İstermisiniz: E / H");
                         String userInp = input.nextLine();
                         if (userInp.equalsIgnoreCase("e")) {
-                            System.out.println("Yeni Dosya Adını Giriniz");
+                            System.out.println("Okuşturmak İstediginiz Dosya Adını Giriniz");
                             fileName = input.nextLine();
                             fileText = new File(fileName);
                             try {
@@ -63,7 +63,7 @@ public class Main {
                         BufferedReader bufferedReader = new BufferedReader(new FileReader(readFile));
                         String Line;
                         while ((Line = bufferedReader.readLine()) != null) {
-                            System.out.println("Kayıtlı Metinleriniz\n" + Line);
+                            System.out.println("Dosya da Kayıtlı Metinleriniz\n" + Line);
                         }
 
                     } catch (FileNotFoundException e) {
